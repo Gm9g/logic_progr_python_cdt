@@ -1,27 +1,48 @@
-###MVC
-
-#model
-###armazenar os numeros e calculos
+##MVC
+#Model
+### vai conter a lógica de cálculo # da calculadora.
 
 #View
-###realiza operações matematicas
+### vai exibir o resultado na tela.
 
 #Controller
-###validar entradas 
+### vai receber as entradas do # usuário e interagir com o modelo.
 
 
 def mostrar_menu():
- print("\n---calculadora---")
-print("1.adição")
-print("2.subtração")
-print("Sair")
-print("------------")
+    print("\n---Calculadora---")
+    print("1. Adição")
+    print("2. Subtração")
+    print("5. Sair")
+    print("-----------------")
 
 def obter_numeros():
- while True:
-  num1= float(input("digite o primeiro numero"))
-  num2=float(input("digite o segundo numero"))
-  return num1, num2
- except ValueError
-print("Entrada Invalida. Por favor,"\
-      "digite numeros válidos.")
+    while True:
+        try:
+            num1 = float(input("Digite o primeiro número: "))
+            num2 = float(input("Digite o segundo número: "))
+            return num1, num2
+        except ValueError:
+            print("Entrada inválida. Por favor, " \
+            "digite números válidos.")
+    
+def main():
+    while True:
+        mostrar_menu()
+        opcao = input("Escolha uma opção: ")
+        if opcao == "1":
+            num1, num2 = obter_numeros()
+            resultado = num1 + num2
+            print(f"Resultado da adição: {resultado}")
+        elif opcao == "2":
+            num1, num2 = obter_numeros()
+            resultado = num1 - num2
+            print(f"Resultado da subtração: {resultado}")
+        elif opcao == "5":
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+if __name__ == "__main__":
+    main()
