@@ -1,0 +1,58 @@
+from datetime import datetime
+
+def saudacao_ao_usuarío():
+    """
+    Solicita o nome do usuário e exibe uma mensagem de saudação personalizada
+    juntamente com a hora atual.
+    """
+    # Pergunta o nome do usuário
+    nome = input("Olá! Por favor, digite seu nome: ")
+
+    # Obtém a data e hora atuais
+    agora = datetime.now()
+
+    # Formata a hora atual para exibição (HH:MM:SS)
+    hora_formatada = agora.strftime("%H:%M:%S")
+
+    # Exibe a mensagem de saudação personalizada com a hora
+    print(f"Olá, {nome}! Seja muito bem-vindo(a). A hora atual é: {hora_formatada}.")
+
+# Chama a função principal para executar o programa
+if __name__ == "__main__":
+    saudacao_ao_usuarío()
+
+
+
+from datetime import datetime
+
+def saudacao_personalizada_completa():
+    """
+    Solicita o nome, idade e profissão do usuário, e exibe uma mensagem
+    de saudação personalizada com todas essas informações, além da hora atual.
+    """
+
+    # Pergunta a idade do usuário
+    # Usamos int() para converter a entrada (que é uma string) para um número inteiro
+    try:
+        idade = int(input("Qual é a sua idade? "))
+    except ValueError:
+        print("Idade inválida. Por favor, digite um número.")
+        return # Sai da função se a idade não for um número válido
+
+    # Pergunta a profissão do usuário
+    profissao = input("Qual é a sua profissão? ")
+
+    # Obtém a data e hora atuais
+    agora = datetime.now()
+
+    # Formata a hora atual para exibição (HH:MM:SS)
+    hora_formatada = agora.strftime("%H:%M:%S")
+
+    # Exibe a mensagem de saudação personalizada com todas as informações
+
+    print(f"É interessante saber que você tem {idade} anos e trabalha como {profissao}.")
+    print(f"A hora atual é: {hora_formatada}.")
+
+# Chama a função principal para executar o programa
+if __name__ == "__main__":
+    saudacao_personalizada_completa()
