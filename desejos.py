@@ -32,4 +32,21 @@ if opcao== "1":
     novo_desejo= input("Qual é o seu novo desejo para o futuro?")
     if novo_desejo.strip()
     desejos.append(novo_desejo.strip())
+salvar_desejos(desejos)
+else:
+print("Desejo não pode ser vazio! Tente novamente.")
+elif opcao == "2":
+print("\n Seus Desejos para o Futuro")
+if not desejos:
+print("Ainda não há desejos na sua lista. que tal adicionar um")
+else:
+for i, desejo in emunerate(desejos):
+print (f"{i+1}. {desejo}")
+print(--------------------------)
+
+elif  opcao =="3":
+print("até a próxima! Continue sonhando alto!")
+break
+else:
+print("opcao inválida. Por favor digite 1, 2 ou 3.")
     
