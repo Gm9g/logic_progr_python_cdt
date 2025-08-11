@@ -1,0 +1,37 @@
+# import json
+
+# json_string="""
+
+
+
+# {"nome_série":"How I Met Your Mother",
+# "Categoria":"Comédia",
+# "Avaliação":"4,8",
+# "Lançamento":"2005",
+# "Temporadas":"9 temporadas",
+# "Direção de Dublagem":" Nair Silva",
+# "Onde Assistir":"Prime Video"
+# }
+
+# import json
+# dados={'nome':'joao silva','idade':30,
+#        'cidade':'Sao Paulo','servico':'premium'}
+
+# json_string=json.dumps(dados)
+
+# print(json_string)
+
+{
+
+
+
+
+
+import={"frutas":"maçã","preco":2.34,}
+"fruta1":"pera","preco":3.75,
+
+"fruta2":"banana,"preco":1.23,
+
+"fruta3":"laranja","preco":4.56 }
+
+with open('frutas.jason,'w', ecoding'=utf-8) as arquivos:json.dump(frutas, arquivos, indent=8, ensure_ascii=false)
